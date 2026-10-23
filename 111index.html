@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b12;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            border-bottom: 1px solid #252535;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a78bfa;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .tag {
+            color: #a78bfa;
+            border: 1px solid #49377b;
+            padding: 9px 18px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 7vw, 75px);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        h1 span {
+            color: #a78bfa;
+        }
+
+        .description {
+            color: #aaaabd;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #7040dc;
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            border: 1px solid #39394b;
+            color: white;
+        }
+
+        .secondary:hover {
+            background: #1b1b2a;
+        }
+
+        .projects {
+            padding: 60px 8%;
+            background: #10101a;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .projects > p {
+            color: #aaaabd;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: #171725;
+            border: 1px solid #29293b;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #8b5cf6;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #c4b5fd;
+        }
+
+        .card p {
+            color: #aaaabd;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #77778b;
+            border-top: 1px solid #252535;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .projects {
+                padding: 45px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MyWebsite.</div>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="tag">✦ Добро пожаловать на мой сайт</div>
+
+            <h1>Создаю <span>цифровое</span><br>будущее</h1>
+
+            <p class="description">
+                Это мой личный сайт, созданный с помощью HTML и CSS.
+                Здесь вы можете узнать больше обо мне и моих проектах.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">
+                    Мои проекты →
+                </a>
+
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer" class="btn secondary">
+                    GitHub ↗
+                </a>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>Мои проекты</h2>
+            <p>Некоторые вещи, которые я создаю</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>🌐 Веб-сайт</h3>
+                    <p>Современный сайт с красивым дизайном
+                       и адаптацией под разные устройства.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Программирование</h3>
+                    <p>Изучаю программирование, пишу код
+                       и создаю новые проекты.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Мои идеи</h3>
+                    <p>Экспериментирую с технологиями
+                       и воплощаю интересные идеи в жизнь.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2026 MyWebsite. Создано с помощью HTML и CSS.</p>
+    </footer>
+
+</body>
+</html>
